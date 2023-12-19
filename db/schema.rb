@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2022_01_27_183154) do
 
   create_table "packages", force: :cascade do |t|
-    t.integer "price_cents", default: 0, null: false
+    t.integer "amount_cents", default: 0, null: false
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2022_01_27_183154) do
   end
 
   create_table "prices", force: :cascade do |t|
-    t.integer "price_cents", null: false
+    t.integer "amount_cents", null: false
     t.integer "package_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
